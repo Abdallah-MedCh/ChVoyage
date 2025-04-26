@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiUrl= 'https://google-flights4.p.rapidapi.com/flights/search-roundtrip'
+const apiUrl= //you get this from rapid api
 const apiKey=process.env.x_rapidapi_Key
 
 export const fetchFlights = async (payload) => {
@@ -8,8 +8,8 @@ export const fetchFlights = async (payload) => {
     url: apiUrl,
     params: payload,
     headers: {
-       'x-rapidapi-key': 'd4851831dcmsh5723bcc01fd81fap142547jsn4c97db66b1df',
-      'x-rapidapi-host': 'google-flights4.p.rapidapi.com'
+       'x-rapidapi-key': //you get this from rapid api,
+      'x-rapidapi-host': //you get this from rapid api
     }
   };
 
@@ -28,13 +28,13 @@ export const fetchFlightDetails = async (flightId) => {
     console.log('Flight details:', response);
     const options = {
       method: 'GET',
-      url: 'https://google-flights4.p.rapidapi.com/flights/get-booking-results',
+      url: //you get this from rapid api,
       params: {
         detailToken: response,
       },
       headers: {
-        'x-rapidapi-key': 'd4851831dcmsh5723bcc01fd81fap142547jsn4c97db66b1df',
-        'x-rapidapi-host': 'google-flights4.p.rapidapi.com'
+        'x-rapidapi-key': //you get this from rapid api,
+        'x-rapidapi-host': //you get this from rapid api
       }
     };
     
@@ -55,7 +55,7 @@ export const fetchFlightDetailsID = async (flightId) => {
 
     const options = {
         method: 'GET',
-        url: 'https://google-flights4.p.rapidapi.com/flights/roundtrip-returning',
+        url: //you get this from rapid api
         params: {
             returningToken: flightId.returningToken,
             arrivalDate: flightId.arrivalDate,
@@ -63,8 +63,8 @@ export const fetchFlightDetailsID = async (flightId) => {
 
           },
         headers: {
-          'x-rapidapi-key': 'd4851831dcmsh5723bcc01fd81fap142547jsn4c97db66b1df',
-          'x-rapidapi-host': 'google-flights4.p.rapidapi.com'
+          'x-rapidapi-key': //you get this from rapid api,
+          'x-rapidapi-host': //you get this from rapid api
         }
       };
       
