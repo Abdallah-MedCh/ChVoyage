@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carts",
+  "info": {
+    "singularName": "cart",
+    "pluralName": "carts",
+    "displayName": "Cart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userName": {
+      "type": "string"
+    },
+    "userMail": {
+      "type": "email"
+    },
+    "prouducts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prouduct.prouduct"
+    }
+  }
+}

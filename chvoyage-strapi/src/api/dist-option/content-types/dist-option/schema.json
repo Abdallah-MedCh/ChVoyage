@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dist_options",
+  "info": {
+    "singularName": "dist-option",
+    "pluralName": "dist-options",
+    "displayName": "DistOption",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HotelName": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "biginteger"
+    },
+    "HotelImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "HotelStars": {
+      "type": "integer"
+    },
+    "whatsincluded": {
+      "type": "blocks"
+    }
+  }
+}

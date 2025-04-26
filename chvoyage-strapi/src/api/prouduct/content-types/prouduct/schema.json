@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prouducts",
+  "info": {
+    "singularName": "prouduct",
+    "pluralName": "prouducts",
+    "displayName": "Prouduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "pafterd": {
+      "type": "boolean"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "prouducts"
+    },
+    "pid": {
+      "type": "uid"
+    }
+  }
+}
